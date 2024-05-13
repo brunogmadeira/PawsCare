@@ -10,7 +10,7 @@ Equipe:
 -   Arthur Silveira Rocha
 -   Bruno Girardi Madeira
 
-Descrição do Projeto (MVP básico): AdotaPets é um sistema abrangente para adoção de animais que visa oferecer suporte às ONGs e facilitar o envolvimento de voluntários. O MVP básico consistirá em uma plataforma online onde as ONGs poderão listar animais disponíveis para adoção, os voluntários poderão se cadastrar e oferecer assistência, e os potenciais adotantes poderão encontrar e entrar em contato com os abrigos. Este MVP inicial terá funcionalidades essenciais para iniciar a conexão entre os diferentes atores envolvidos no processo de adoção de animais, com planos para expansão e adição de recursos mais avançados no futuro.
+Descrição do Projeto: AdotaPets é um sistema abrangente para adoção de animais que visa oferecer suporte às ONGs e facilitar o envolvimento de voluntários. O MVP básico consistirá em uma plataforma online onde as ONGs poderão listar animais disponíveis para adoção, os voluntários poderão se cadastrar e oferecer assistência, e os potenciais adotantes poderão encontrar e entrar em contato com os abrigos. Este MVP inicial terá funcionalidades essenciais para iniciar a conexão entre os diferentes atores envolvidos no processo de adoção de animais, com planos para expansão e adição de recursos mais avançados no futuro.
 
 Objetivo do Projeto: O objetivo do MVP básico do AdotaPets é fornecer uma solução inicial para o problema da adoção de animais, concentrando-se em oferecer suporte às ONGs e facilitar o envolvimento de voluntários. Queremos criar uma plataforma simples, mas eficaz, que permita às ONGs encontrar lares amorosos para os animais sob seus cuidados, enquanto também envolve a comunidade através do voluntariado.
 
