@@ -1,20 +1,8 @@
-# PawsCare
-**Nome/Título do Projeto:** PawsCare
+# React + Vite
 
-**Equipe:** Yasmin Elias Michels, Rafael Frassetto Pereira, Arthur Silveira Rocha, Bruno Girardi Madeira.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-**Descrição do Projeto :**
-PawsCare é um sistema abrangente para adoção de animais que visa oferecer suporte às ONGs e facilitar o envolvimento de voluntários. O MVP básico consistirá em uma plataforma online onde as ONGs e pessoas no geral poderão listar animais disponíveis para adoção, os voluntários poderão se cadastrar e oferecer assistência, e os potenciais adotantes poderão encontrar e entrar em contato com os abrigos.
+Currently, two official plugins are available:
 
-**Objetivo do Projeto:**
-O projeto PawsCare tem como objetivo principal contribuir para a realização das metas das Nações Unidas relacionadas à saúde (ODS 3) e à vida terrestre (ODS 15). Ao fornecer uma solução inicial para o problema da adoção de animais, concentra-se em oferecer suporte às Organizações Não Governamentais (ONGs) e facilitar o envolvimento de voluntários. Pretendemos desenvolver uma plataforma simples, porém eficaz, que permita às ONGs encontrar lares amorosos para os animais sob seus cuidados, contribuindo assim para a promoção da saúde dos animais (ODS 3) e para a conservação da vida terrestre (ODS 15), enquanto também promove o engajamento da comunidade por meio do voluntariado. 
-
-**Cliente ou Público-alvo:**
-O público-alvo do PawsCare inclui três grupos principais: ONGs de proteção animal, potenciais adotantes e pessoas interessadas em se envolver como voluntárias. As ONGs usarão o aplicativo para promover a adoção de seus animais resgatados, os potenciais adotantes o utilizarão para encontrar o animal ideal para sua família, e os voluntários para oferecer suporte às ONGs em diversas atividades, como cuidados com os animais, eventos de adoção e divulgação nas redes sociais. A real necessidade desses grupos é ter uma plataforma centralizada e intuitiva que facilite a conexão entre eles, tornando o processo de adoção mais eficiente e aumentando as chances de sucesso.
-
-
-**Tecnologias, bibliotecas e frameworks:** React.ts com Vite e Radix com TailwidCSS
-
-
-**Características/diferenciais importantes do projeto:**
-Uma das principais características do PawsCare é sua abordagem abrangente, que não se limita apenas à facilitação da adoção de animais, mas também engloba o apoio às ONGs e o incentivo ao voluntariado.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

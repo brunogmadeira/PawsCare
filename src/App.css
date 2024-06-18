@@ -1,0 +1,130 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+body{
+  overflow: hidden;
+}
+
+.container{
+  display: flex;
+}
+
+/* child ao lado do formulário*/
+
+.parede{
+  position: relative;
+  bottom: 32px;
+  left: 250px;
+  background-color: #1CAC78;
+  width: 488px;
+  height: 940px;
+  padding-right: 550px;
+}
+
+
+.parede>h1{
+  color: white;
+  font-size: 75px;
+  font-family: 'Lucida Sans';
+  position: relative;
+  top: 280px;
+  padding-left: 180px; 
+}
+
+
+/* Formulário */
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.formulario{
+  position: relative;
+  right: 10px;
+  width: 375px;
+  top: 125px;
+}
+
+h1{
+  font-size: 48px;
+  color:  #1CAC78;
+  padding: 2px 0 10px 0;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+
+p{
+  margin-bottom:15px;
+}
+ 
+
+ 
+label{
+  color: #405c60;
+  position: relative;
+}
+
+/* placeholder */
+::-webkit-input-placeholder  {
+  color: #bebcbc; 
+  font-style: italic;
+}
+ 
+input:-moz-placeholder,
+textarea:-moz-placeholder{
+  color: #bebcbc;
+  font-style: italic;
+}
+
+input {
+  outline: none;
+}
+ 
+/*estilo dos input*/
+input:not([type="checkbox"]){
+  width: 95%;
+  margin-top: 4px;
+  padding: 10px;    
+  border: 1px solid #b2b2b2;
+ 
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+ 
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+  box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+ 
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+ 
+/*estilo do botão submit */
+input[type="submit"]{
+  width: 100%!important;
+  cursor: pointer;  
+  background: #1CAC78;
+  padding: 8px 5px;
+  color: #fff;
+  font-size: 20px;  
+  border: 1px solid #fff;   
+  margin-bottom: 10px;  
+  text-shadow: 0 1px 1px #333;
+ 
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+ 
+  transition: all 0.2s linear;
+}
+ 
+/*estilo do botão submit no hover */
+input[type="submit"]:hover{
+  background: rgb(253, 253, 253);
+  color: #1CAC78;
+}
+
+ 
+
