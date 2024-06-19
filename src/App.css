@@ -18,20 +18,21 @@ body{
   position: relative;
   bottom: 32px;
   left: 250px;
-  background-color: #1CAC78;
+  background-color: #939;
   width: 488px;
   height: 940px;
   padding-right: 550px;
 }
 
 
-.parede>h1{
+.parede > h1 {
   color: white;
   font-size: 75px;
   font-family: 'Lucida Sans';
   position: relative;
-  top: 280px;
-  padding-left: 180px; 
+  top: 299px;
+  padding-left: 243px;
+  margin: 0;
 }
 
 
@@ -50,7 +51,7 @@ body{
 
 h1{
   font-size: 48px;
-  color:  #1CAC78;
+  color:  rgb(255, 255, 255);
   padding: 2px 0 10px 0;
   font-weight: bold;
   text-align: center;
@@ -106,7 +107,7 @@ input:not([type="checkbox"]){
 input[type="submit"]{
   width: 100%!important;
   cursor: pointer;  
-  background: #1CAC78;
+  background: #939;
   padding: 8px 5px;
   color: #fff;
   font-size: 20px;  
