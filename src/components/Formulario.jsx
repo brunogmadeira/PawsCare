@@ -8,7 +8,7 @@ const Formulario = () => {
         <form method="post" action=""> 
           <h1>Login</h1> 
           <p> 
-            <label for="nome_login">Seu e-mail</label>
+            <label for="nome_login">Seu email</label>
             <input id="nome_login" name="nome_login" required="required"cd type="text" placeholder="ex. seuemail@gmail.com"/>
           </p>
           <p> 
