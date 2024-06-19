@@ -18,6 +18,7 @@ const Formulario = () => {
           <p> 
           <Link to="TelaHome"> <input type="submit" value="Logar" /> </Link>
           </p>
+          <Link to="TelaHome"> Clique aqui seja uma ONG </Link>
         </form>
         </div>
       </div>
