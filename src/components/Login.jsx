@@ -10,7 +10,7 @@ const Login = () => {
                 </div>
 
                 <div className="child">
-                    <div className="parede">
+                    <div className="logo">
                           <h1>PawsCare</h1>
                     </div>
                 </div>
