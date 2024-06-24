@@ -154,7 +154,7 @@ input[type="submit"]:hover{
   background-color: #939;
   margin-top: 0px;
   width: 1370px;
-  height: 190px;
+  height: 400px;
   position: relative;
   bottom: 110px;
   right: 380px;
@@ -163,8 +163,8 @@ input[type="submit"]:hover{
 
 .titleHeader{
 position: absolute;
-left: 500px;
-bottom: 20px;
+left: 369px;
+bottom: 238px;
 color: white;
 font-family: 'Lucida Sans';
 }
@@ -173,19 +173,20 @@ font-family: 'Lucida Sans';
   display: flex;
   justify-content: space-around;
   position: relative;
-  bottom: 85px;
+  bottom: 251px;
 }
 
 
 
-.styleMenu{
-  background-color: #242424;
-  border: none;
+.styleMenu {
+  background-color: white; /* Alteração para branco */
+  border: none; /* Remoção do contorno preto */
   color: #939;
   font-size: 25px;
   font-weight: bold;
   cursor: pointer;
-
+  border-radius: 5px; /* Redução do valor para deixar a borda mais quadrada */
+  padding: 10px; /* Adição de espaçamento entre o texto e a borda */
 }
 
 .styleMenu:hover{
