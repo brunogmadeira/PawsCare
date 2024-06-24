@@ -15,7 +15,7 @@ const Formulario = () => {
                         <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" />
                     </p>
                     <p>
-                        <input type="submit" value="Logar" />
+                    <Link to="TelaHome"> <input type="submit" value="Logar" /> </Link>
                     </p>
                     <Link to="/login-ong">Clique aqui caso seja uma ONG</Link>
                 </form>
