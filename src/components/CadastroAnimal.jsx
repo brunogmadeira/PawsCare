@@ -5,6 +5,11 @@ function CadastroAnimal() {
   const [endereco, setEndereco] = useState('');
   const [telefone, setTelefone] = useState('');
   const [foto, setFoto] = useState(null);
+  const [especie, setEspecie] = useState('');
+  const [raca, setRaca] = useState('');
+  const [idade, setIdade] = useState('');
+  const [genero, setGenero] = useState('');
+  const [peso, setPeso] = useState('');
   const [items, setItems] = useState([]);
 
   const handleChangeNomeAnimal = (e) => {
@@ -17,6 +22,26 @@ function CadastroAnimal() {
 
   const handleChangeTelefone = (e) => {
     setTelefone(e.target.value);
+  };
+
+  const handleChangeEspecie = (e) => {
+    setEspecie(e.target.value);
+  };
+
+  const handleChangeRaca = (e) => {
+    setRaca(e.target.value);
+  };
+
+  const handleChangeIdade = (e) => {
+    setIdade(e.target.value);
+  };
+
+  const handleChangeGenero = (e) => {
+    setGenero(e.target.value);
+  };
+
+  const handleChangePeso = (e) => {
+    setPeso(e.target.value);
   };
 
   const handleFileChange = (e) => {
@@ -40,12 +65,27 @@ function CadastroAnimal() {
   };
 
   const adicionarItem = () => {
-    const newItem = { nomeAnimal, endereco, telefone, foto };
+    const newItem = { 
+      nomeAnimal, 
+      endereco, 
+      telefone, 
+      foto,
+      especie,
+      raca,
+      idade,
+      genero,
+      peso
+    };
     setItems([...items, newItem]);
     setNomeAnimal('');
     setEndereco('');
     setTelefone('');
     setFoto(null);
+    setEspecie('');
+    setRaca('');
+    setIdade('');
+    setGenero('');
+    setPeso('');
   };
 
   const excluirItem = (index) => {
@@ -62,6 +102,11 @@ function CadastroAnimal() {
             <p>Nome do Animal: {item.nomeAnimal}</p>
             <p>Endereço: {item.endereco}</p>
             <p>Telefone: {item.telefone}</p>
+            <p>Espécie: {item.especie}</p>
+            <p>Raça: {item.raca}</p>
+            <p>Idade: {item.idade}</p>
+            <p>Gênero: {item.genero}</p>
+            <p>Peso: {item.peso}</p>
             {item.foto && <img src={URL.createObjectURL(item.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
             <button onClick={() => excluirItem(index)}>Excluir</button>
           </div>
@@ -85,8 +130,38 @@ function CadastroAnimal() {
         type="text"
         placeholder="Telefone"
       />
+      <input
+        value={especie}
+        onChange={handleChangeEspecie}
+        type="text"
+        placeholder="Espécie"
+      />
+      <input
+        value={raca}
+        onChange={handleChangeRaca}
+        type="text"
+        placeholder="Raça"
+      />
+      <input
+        value={idade}
+        onChange={handleChangeIdade}
+        type="text"
+        placeholder="Idade"
+      />
+      <input
+        value={genero}
+        onChange={handleChangeGenero}
+        type="text"
+        placeholder="Gênero"
+      />
+      <input
+        value={peso}
+        onChange={handleChangePeso}
+        type="text"
+        placeholder="Peso"
+      />
       <input type="file" accept="image/*" onChange={handleFileChange} />
-      <button onClick={adicionarItem} disabled={!nomeAnimal || !endereco || !telefone || !foto}>
+      <button onClick={adicionarItem} disabled={!nomeAnimal || !endereco || !telefone || !foto || !especie || !raca || !idade || !genero || !peso}>
         Adicionar
       </button>
     </div>

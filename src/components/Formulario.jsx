@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Formulario = () => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate('/TelaHome');
+    };
+
     return (
         <div>
             <div className="formulario">
-                <form method="post" action="">
+                <form method="post" onSubmit={handleSubmit}>
                     <h1>Login</h1>
                     <p>
                         <label htmlFor="nome_login">Seu e-mail</label>
@@ -15,7 +22,7 @@ const Formulario = () => {
                         <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" />
                     </p>
                     <p>
-                    <Link to="TelaHome"> <input type="submit" value="Logar" /> </Link>
+                        <input type="submit" value="Logar" />
                     </p>
                     <Link to="/login-ong">Clique aqui caso seja uma ONG</Link>
                 </form>

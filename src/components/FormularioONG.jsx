@@ -1,10 +1,17 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const FormularioONG = () => {
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate('/TelaHome');
+    };
+
     return (
         <div>
             <div className="formulario-ong">
-                <form method="post" action="">
+                <form method="post" onSubmit={handleSubmit}>
                     <h1>Login ONG</h1>
                     <p>
                         <label htmlFor="nome_login_ong">Seu e-mail</label>
