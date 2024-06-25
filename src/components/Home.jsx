@@ -27,6 +27,13 @@ const TelaHome = () => {
         setSelectedAnimal(null);
     };
 
+    // Função para oferecer assistência via WhatsApp
+    const handleOfferAssistanceWhatsapp = () => {
+        const phone = encodeURIComponent(selectedAnimal.telefone);
+        const msg = encodeURIComponent('Olá, estou oferecendo assistência para o animal ' + selectedAnimal.nome);
+        window.open('https://wa.me/' + '+55' + phone + '?text=' + msg, '_blank');
+    };
+
     return (
         <div>
             <div>
@@ -74,7 +81,8 @@ const TelaHome = () => {
                         <span onClick={handleModalClose}>Fechar</span>
                         <h2>Oferecer Assistência</h2>
                         <p>Para oferecer assistência ao animal {selectedAnimal.nome}, clique no botão abaixo para ser redirecionado ao WhatsApp.</p>
-                        <a href="https://chat.whatsapp.com/DXN4NzqEqID7BW6QCnZEKf" target="_blank" rel="noopener noreferrer">
+                        {/* botão para oferecer assistência via WhatsApp */}
+                        <a href="#" onClick={handleOfferAssistanceWhatsapp} rel="noopener noreferrer">
                             <button>Oferecer Assistência via WhatsApp</button>
                         </a>
                     </div>
