@@ -22,9 +22,9 @@ const Formulario = () => {
                         <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" />
                     </p>
                     <p>
-                        <input type="submit" value="Logar" />
+                        <input type="submit" value="Entrar" />
                     </p>
-                    <Link to="/FormularioONG">Clique aqui caso seja uma ONG</Link>
+                    <Link to="/FormularioCadastro">Não possui uma conta? Cadastre-se!</Link>
                 </form>
             </div>
         </div>

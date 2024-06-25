@@ -3,7 +3,7 @@ import { AnimalProvider } from './context/AnimalContext';
 import TelaLogin from './pages/TelaLogin';
 import TelaHome from './pages/TelaHome';
 import TelaCadastro from './pages/TelaCadastro';
-import FormularioONG from './components/FormularioONG';
+import FormularioCadastro from './components/FormularioCadastro';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
           <Route path='/' element={<TelaLogin />} />
           <Route path='/TelaHome' element={<TelaHome />} />
           <Route path='/TelaCadastro' element={<TelaCadastro />} />
-          <Route path='/FormularioONG' element={<FormularioONG />} />
+          <Route path='/FormularioCadastro' element={<FormularioCadastro />} />
         </Routes>
       </Router>
     </AnimalProvider>
