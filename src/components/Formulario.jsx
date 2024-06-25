@@ -24,7 +24,7 @@ const Formulario = () => {
                     <p>
                         <input type="submit" value="Logar" />
                     </p>
-                    <Link to="/login-ong">Clique aqui caso seja uma ONG</Link>
+                    <Link to="/FormularioONG">Clique aqui caso seja uma ONG</Link>
                 </form>
             </div>
         </div>
