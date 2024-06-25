@@ -4,6 +4,7 @@ import TelaLogin from './pages/TelaLogin';
 import TelaHome from './pages/TelaHome';
 import TelaCadastro from './pages/TelaCadastro';
 import FormularioCadastro from './components/FormularioCadastro';
+import Perfil from './components/Perfil';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path='/TelaHome' element={<TelaHome />} />
           <Route path='/TelaCadastro' element={<TelaCadastro />} />
           <Route path='/FormularioCadastro' element={<FormularioCadastro />} />
+          <Route path='/Perfil' element={<Perfil />} />
         </Routes>
       </Router>
     </AnimalProvider>

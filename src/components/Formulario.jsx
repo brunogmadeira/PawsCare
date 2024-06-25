@@ -14,12 +14,12 @@ const Formulario = () => {
                 <form method="post" onSubmit={handleSubmit}>
                     <h1>Login</h1>
                     <p>
-                        <label htmlFor="nome_login">Seu e-mail</label>
-                        <input id="nome_login" name="nome_login" required="required" type="text" placeholder="ex. seuemail@gmail.com" />
+                        <label htmlFor="email">Seu e-mail</label>
+                        <input id="email" name="email" required="required" type="text" placeholder="ex. seuemail@gmail.com" />
                     </p>
                     <p>
-                        <label htmlFor="email_login">Sua senha</label>
-                        <input id="email_login" name="email_login" required="required" type="password" placeholder="ex. senha" />
+                        <label htmlFor="senha">Sua senha</label>
+                        <input id="senha" name="senha" required="required" type="password" placeholder="ex. senha" />
                     </p>
                     <p>
                         <input type="submit" value="Entrar" />
