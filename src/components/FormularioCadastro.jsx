@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { UserProvider, UserContext } from './context/UserContext';
+import { UserContext, UserProvider } from '../context/UserContext';
 
 const FormularioCadastro = () => {
     const navigate = useNavigate();
