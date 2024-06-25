@@ -9,6 +9,7 @@ function CadastroAnimal() {
   const [endereco, setEndereco] = useState('');
   const [telefone, setTelefone] = useState('');
   const [foto, setFoto] = useState(null);
+  const [mensagem, setMensagem] = useState('');
 
   const { addAnimal } = useContext(AnimalContext);
 
@@ -50,11 +51,17 @@ function CadastroAnimal() {
     setEndereco('');
     setTelefone('');
     setFoto(null);
+    // Mensagem para o usuário após o cadastro do animal
+    setMensagem('Animal cadastrado com sucesso!');
+    setTimeout(() => {
+      setMensagem('');
+    }, 3000); // Limpa a mensagem após 3 segundos
   };
 
   return (
     <div>
       <h2>Cadastro de Animal</h2>
+      {mensagem && <p>{mensagem}</p>}
       <form onSubmit={handleSubmit}>
         <input
           value={nome}
