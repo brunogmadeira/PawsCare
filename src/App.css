@@ -167,18 +167,18 @@ input[type='submit']:hover {
 }
 
 .styleMenu {
-  background-color: white; /* Alteração para branco */
-  border: none; /* Remoção do contorno preto */
-  color: #939;
+  background-color: #939; 
+  border: none; 
+  color: rgb(254, 251, 254);
   font-size: 25px;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 5px; /* Redução do valor para deixar a borda mais quadrada */
-  padding: 10px; /* Adição de espaçamento entre o texto e a borda */
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .styleMenu:hover {
-  color: #938;
+  color: rgb(44, 2, 44);
 }
 
 /* TELA HOME */
