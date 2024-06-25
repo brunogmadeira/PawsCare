@@ -6,7 +6,7 @@ const Menu = () => {
                 <div className="childMenu"><button className="styleMenu">Sobre</button></div>
                 <Link to="../TelaHome"><div className='childMenu'> <button className="styleMenu">Home</button></div></Link>
                 <Link to="../TelaCadastro"><div className='childMenu'><button className="styleMenu">Cadastro de animais</button></div> </Link>
-                <Link to="../Perfil"><div className='childMenu'><button className="styleMenu">Perfil</button></div></Link>
+                <Link to="../TelaPerfil"><div className='childMenu'><button className="styleMenu">Perfil</button></div></Link>
             </div>
     )  
 }

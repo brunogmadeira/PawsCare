@@ -42,7 +42,6 @@ const Home = () => {
   return (
     <div className="containerHome">
       <div className="BlocoHomeEsq">
-        <h1 className="TitleHome">Lista de Animais</h1>
         <input
           type="text"
           value={searchText}

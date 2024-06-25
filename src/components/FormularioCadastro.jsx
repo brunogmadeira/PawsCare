@@ -8,11 +8,28 @@ const FormularioCadastro = () => {
         navigate('/');
     };
 
+    const checkboxStyle = {
+        marginRight: '20px',
+    };
+    const labelCheckboxStyled ={
+        paddingLeft: '4px'
+    }
+
     return (
         <div>
             <div className="formulario-ong">
                 <form method="post" onSubmit={handleSubmit}>
                     <h1>Cadastro</h1>
+                    <p>
+                        <label style={checkboxStyle}>
+                            <input type="checkbox" name="tipo_usuario" value="0" />
+                            <span style={labelCheckboxStyled}>ONG</span>
+                        </label>
+                        <label style={checkboxStyle}>
+                            <input type="checkbox" name="tipo_usuario" value="1" />
+                            <span style={labelCheckboxStyled}>Voluntário</span>
+                        </label>
+                    </p>
                     <p>
                         <label htmlFor="nome_completo">Seu nome completo:</label>
                         <input id="nome_completo" name="nome_completo" required="required" type="text" placeholder="ex. Seu Nome" />
