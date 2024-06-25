@@ -1,12 +1,14 @@
-import Header from "../components/Header"
-import CadastroAnimal from "../components/CadastroAnimal"
+import React from 'react';
+import Header from '../components/Header';
+import CadastroAnimal from '../components/CadastroAnimal';
 
-const TelaCadastro = () => {
-    return(
-        <div>
-            <div className="headerPosition"><Header /></div>
-            <CadastroAnimal/>
-        </div>
-    )
+function TelaCadastro() {
+  return (
+    <div>
+      <Header />
+      <CadastroAnimal />
+    </div>
+  );
 }
-export default TelaCadastro
+
+export default TelaCadastro;
