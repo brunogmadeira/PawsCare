@@ -1,48 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import { AnimalContext } from '../context/AnimalContext';
 
 function CadastroAnimal() {
-  const [nomeAnimal, setNomeAnimal] = useState('');
+  const [nome, setNome] = useState('');
+  const [raca, setRaca] = useState('');
+  const [cor, setCor] = useState('');
+  const [tipoPelo, setTipoPelo] = useState('');
   const [endereco, setEndereco] = useState('');
   const [telefone, setTelefone] = useState('');
   const [foto, setFoto] = useState(null);
-  const [especie, setEspecie] = useState('');
-  const [raca, setRaca] = useState('');
-  const [idade, setIdade] = useState('');
-  const [genero, setGenero] = useState('');
-  const [peso, setPeso] = useState('');
-  const [items, setItems] = useState([]);
 
-  const handleChangeNomeAnimal = (e) => {
-    setNomeAnimal(e.target.value);
-  };
-
-  const handleChangeEndereco = (e) => {
-    setEndereco(e.target.value);
-  };
-
-  const handleChangeTelefone = (e) => {
-    setTelefone(e.target.value);
-  };
-
-  const handleChangeEspecie = (e) => {
-    setEspecie(e.target.value);
-  };
-
-  const handleChangeRaca = (e) => {
-    setRaca(e.target.value);
-  };
-
-  const handleChangeIdade = (e) => {
-    setIdade(e.target.value);
-  };
-
-  const handleChangeGenero = (e) => {
-    setGenero(e.target.value);
-  };
-
-  const handleChangePeso = (e) => {
-    setPeso(e.target.value);
-  };
+  const { addAnimal } = useContext(AnimalContext);
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -64,106 +32,80 @@ function CadastroAnimal() {
     }
   };
 
-  const adicionarItem = () => {
-    const newItem = { 
-      nomeAnimal, 
-      endereco, 
-      telefone, 
-      foto,
-      especie,
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    addAnimal({
+      nome,
       raca,
-      idade,
-      genero,
-      peso
-    };
-    setItems([...items, newItem]);
-    setNomeAnimal('');
+      cor,
+      tipoPelo,
+      endereco,
+      telefone,
+      foto
+    });
+    setNome('');
+    setRaca('');
+    setCor('');
+    setTipoPelo('');
     setEndereco('');
     setTelefone('');
     setFoto(null);
-    setEspecie('');
-    setRaca('');
-    setIdade('');
-    setGenero('');
-    setPeso('');
-  };
-
-  const excluirItem = (index) => {
-    const novosItems = [...items];
-    novosItems.splice(index, 1);
-    setItems(novosItems);
   };
 
   return (
     <div>
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
-        {items.map((item, index) => (
-          <div key={index} style={{ marginRight: '20px', marginBottom: '20px' }}>
-            <p>Nome do Animal: {item.nomeAnimal}</p>
-            <p>Endereço: {item.endereco}</p>
-            <p>Telefone: {item.telefone}</p>
-            <p>Espécie: {item.especie}</p>
-            <p>Raça: {item.raca}</p>
-            <p>Idade: {item.idade}</p>
-            <p>Gênero: {item.genero}</p>
-            <p>Peso: {item.peso}</p>
-            {item.foto && <img src={URL.createObjectURL(item.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
-            <button onClick={() => excluirItem(index)}>Excluir</button>
-          </div>
-        ))}
-      </div>
-      <input
-        value={nomeAnimal}
-        onChange={handleChangeNomeAnimal}
-        type="text"
-        placeholder="Nome do Animal"
-      />
-      <input
-        value={endereco}
-        onChange={handleChangeEndereco}
-        type="text"
-        placeholder="Endereço onde foi encontrado"
-      />
-      <input
-        value={telefone}
-        onChange={handleChangeTelefone}
-        type="text"
-        placeholder="Telefone"
-      />
-      <input
-        value={especie}
-        onChange={handleChangeEspecie}
-        type="text"
-        placeholder="Espécie"
-      />
-      <input
-        value={raca}
-        onChange={handleChangeRaca}
-        type="text"
-        placeholder="Raça"
-      />
-      <input
-        value={idade}
-        onChange={handleChangeIdade}
-        type="text"
-        placeholder="Idade"
-      />
-      <input
-        value={genero}
-        onChange={handleChangeGenero}
-        type="text"
-        placeholder="Gênero"
-      />
-      <input
-        value={peso}
-        onChange={handleChangePeso}
-        type="text"
-        placeholder="Peso"
-      />
-      <input type="file" accept="image/*" onChange={handleFileChange} />
-      <button onClick={adicionarItem} disabled={!nomeAnimal || !endereco || !telefone || !foto || !especie || !raca || !idade || !genero || !peso}>
-        Adicionar
-      </button>
+      <h2>Cadastro de Animal</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          value={nome}
+          onChange={(e) => setNome(e.target.value)}
+          type="text"
+          placeholder="Nome do Animal"
+          required
+        />
+        <input
+          value={raca}
+          onChange={(e) => setRaca(e.target.value)}
+          type="text"
+          placeholder="Raça"
+          required
+        />
+        <input
+          value={cor}
+          onChange={(e) => setCor(e.target.value)}
+          type="text"
+          placeholder="Cor"
+          required
+        />
+        <input
+          value={tipoPelo}
+          onChange={(e) => setTipoPelo(e.target.value)}
+          type="text"
+          placeholder="Tipo de Pelo"
+          required
+        />
+        <input
+          value={endereco}
+          onChange={(e) => setEndereco(e.target.value)}
+          type="text"
+          placeholder="Endereço onde foi encontrado"
+          required
+        />
+        <input
+          value={telefone}
+          onChange={(e) => setTelefone(e.target.value)}
+          type="text"
+          placeholder="Telefone"
+          required
+        />
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleFileChange}
+          required
+        />
+        <button type="submit">Cadastrar</button>
+      </form>
     </div>
   );
 }

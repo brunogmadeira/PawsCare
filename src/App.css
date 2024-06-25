@@ -209,3 +209,28 @@ input[type='submit']:hover {
   width: 550px;
   height: 400px;
 }
+
+.animalList {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.animalCard {
+  flex: 0 0 30%; 
+  margin: 0 10px 20px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.animalCard p {
+  margin: 5px 0;
+}
+
+.animalCard img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-top: 10px;
+}
