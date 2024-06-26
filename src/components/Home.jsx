@@ -35,61 +35,62 @@ const TelaHome = () => {
     };
 
     return (
-        <div>
-            <div>
-                <h2>Pesquise o animal que deseja</h2>
-                <input
-                    type="text"
-                    value={searchText}
-                    onChange={handleSearchChange}
-                    placeholder="Pesquisar animais..."
-                />
+        <div className="containerHome">
+          <div className="BlocoHomeEsq">
+            <input
+              type="text"
+              value={searchText}
+              onChange={handleSearchChange}
+              placeholder="Pesquisar animais..."
+            />
+            <br />
+            <br />
+            <br />
+            <div className="animalList">
+              {searchText ? (
+                filteredAnimals.map((animal, index) => (
+                  <div key={index} className="animalCard">
+                    <p>Nome: {animal.nome}</p>
+                    <p>Raça: {animal.raca}</p>
+                    <p>Cor: {animal.cor}</p>
+                    <p>Tipo de Pelo: {animal.tipoPelo}</p>
+                    <p>Endereço: {animal.endereco}</p>
+                    <p>Telefone: {animal.telefone}</p>
+                    {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
+                    <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
+                  </div>
+                ))
+              ) : (
+                animals.map((animal, index) => (
+                  <div key={index} className="animalCard">
+                    <p>Nome: {animal.nome}</p>
+                    <p>Raça: {animal.raca}</p>
+                    <p>Cor: {animal.cor}</p>
+                    <p>Tipo de Pelo: {animal.tipoPelo}</p>
+                    <p>Endereço: {animal.endereco}</p>
+                    <p>Telefone: {animal.telefone}</p>
+                    {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
+                    <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+    
+          {showModal && (
                 <div>
-                    {searchText ? (
-                        filteredAnimals.map((animal, index) => (
-                            <div key={index}>
-                                <p>Nome: {animal.nome}</p>
-                                <p>Raça: {animal.raca}</p>
-                                <p>Cor: {animal.cor}</p>
-                                <p>Tipo de Pelo: {animal.tipoPelo}</p>
-                                <p>Endereço: {animal.endereco}</p>
-                                <p>Telefone: {animal.telefone}</p>
-                                {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
-                                <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
-                            </div>
-                        ))
-                    ) : (
-                        animals.map((animal, index) => (
-                            <div key={index}>
-                                <p>Nome: {animal.nome}</p>
-                                <p>Raça: {animal.raca}</p>
-                                <p>Cor: {animal.cor}</p>
-                                <p>Tipo de Pelo: {animal.tipoPelo}</p>
-                                <p>Endereço: {animal.endereco}</p>
-                                <p>Telefone: {animal.telefone}</p>
-                                {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
-                                <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
-                            </div>
-                        ))
-                    )}
+                <div>
+                    <span onClick={handleModalClose}>Fechar</span>
+                    <h2>Oferecer Assistência</h2>
+                    <p>Para oferecer assistência ao animal {selectedAnimal.nome}, clique no botão abaixo para ser redirecionado ao WhatsApp.</p>
+                    <a href="https://chat.whatsapp.com/DXN4NzqEqID7BW6QCnZEKf" target="_blank" rel="noopener noreferrer">
+                        <button>Oferecer Assistência via WhatsApp</button>
+                    </a>
                 </div>
             </div>
-
-            {showModal && (
-                <div>
-                    <div>
-                        <span onClick={handleModalClose}>Fechar</span>
-                        <h2>Oferecer Assistência</h2>
-                        <p>Para oferecer assistência ao animal {selectedAnimal.nome}, clique no botão abaixo para ser redirecionado ao WhatsApp.</p>
-                        {/* botão para oferecer assistência via WhatsApp */}
-                        <a href="#" onClick={handleOfferAssistanceWhatsapp} rel="noopener noreferrer">
-                            <button>Oferecer Assistência via WhatsApp</button>
-                        </a>
-                    </div>
-                </div>
-            )}
+          )}
         </div>
-    );
-};
+      );
+    };
 
 export default TelaHome;

@@ -6,6 +6,7 @@ function TelaCadastro() {
   return (
     <div>
       <Header />
+      <br /><br /><br /><br /><br /><br /><br />
       <CadastroAnimal />
     </div>
   );

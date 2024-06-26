@@ -9,7 +9,6 @@ const Formulario = () => {
     };
 
     return (
-        <div>
             <div className="formulario">
                 <form method="post" onSubmit={handleSubmit}>
                     <h1>Login</h1>
@@ -27,7 +26,6 @@ const Formulario = () => {
                     <Link to="/FormularioCadastro">Não possui uma conta? Cadastre-se!</Link>
                 </form>
             </div>
-        </div>
     );
 };
 

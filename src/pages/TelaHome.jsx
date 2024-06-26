@@ -3,10 +3,12 @@ import Home from "../components/Home";
 
 const TelaHome = () => {
     return(
-        <div>
+        <div className="tela-home">
             <Header/>
+            <br /><br /><br /><br /><br /><br /><br />
             <Home/>
         </div>
     )
 }
+
 export default TelaHome

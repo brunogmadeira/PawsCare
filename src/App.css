@@ -1,43 +1,26 @@
 body {
   overflow-x: hidden;
   overflow-y: auto; 
+  width: 100%;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;  
 }
 
 .container {
   display: flex;
+  width: 100%;
 }
 
 /* child ao lado do formulário*/
-.parede {
-  position: relative;
-  bottom: 32px;
-  left: 250px;
-  background-color: #939;
-  width: 488px;
-  height: 940px;
-  padding-right: 550px;
-}
 
-.parede > h1 {
-  color: white;
-  font-size: 75px;
-  font-family: 'Lucida Sans';
-  position: relative;
-  top: 299px;
-  padding-left: 243px;
-  margin: 0;
-}
 
 .logo {
   position: relative;
-  bottom: 32px;
   left: 250px;
   background-color: #939;
   width: 488px;
@@ -63,13 +46,14 @@ body {
 
 .formulario {
   position: relative;
-  right: 10px;
-  width: 375px;
-  top: 125px;
+  width: 400px;
+  top: 160px;
+  margin-left: 200px; 
+  border-left: 90px;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
   padding: 2px 0 10px 0;
   font-weight: bold;
@@ -143,27 +127,29 @@ input[type='submit']:hover {
 .barra {
   background-color: #939;
   margin-top: 0px;
-  width: 1370px;
-  height: 400px;
-  position: relative;
-  bottom: 110px;
-  right: 380px;
-  padding-right: 667px;
+  width: 100%;
+  position: absolute;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
+
 .titleHeader {
-  position: absolute;
-  left: 369px;
-  bottom: 238px;
+  margin-left: -80%;
   color: white;
   font-family: 'Lucida Sans';
+  font-size: 40px;
+  height: 40px;
 }
 
 .containerMenu {
   display: flex;
-  justify-content: space-around;
-  position: relative;
-  bottom: 251px;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: -8%;
 }
 
 .styleMenu {
@@ -184,6 +170,8 @@ input[type='submit']:hover {
 /* TELA HOME */
 .containerHome {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .BlocoHomeEsq {
