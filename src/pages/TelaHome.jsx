@@ -5,7 +5,7 @@ const TelaHome = () => {
     return(
         <div className="tela-home">
             <Header/>
-            <br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
             <Home/>
         </div>
     )

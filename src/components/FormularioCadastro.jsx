@@ -12,43 +12,81 @@ const FormularioCadastro = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        if (!tipoCadastro) {
+            alert('Por favor, selecione um tipo de cadastro.');
+            return;
+        }
+
         updateUser({ nome, email, tipoCadastro });
         navigate('/');
+    };
+
+    const handleCheckboxChange = (value) => {
+        setTipoCadastro(value);
     };
 
     const checkboxStyle = {
         marginRight: '20px',
     };
-    const labelCheckboxStyled ={
-        paddingLeft: '4px'
+    const labelCheckboxStyled = {
+        paddingLeft: '4px',
     };
 
     return (
         <div>
             <div className="formulario-ong">
-                <form method="post" onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <h1>Cadastro</h1>
                     <p>
                         <label style={checkboxStyle}>
-                            <input type="checkbox" name="tipo_usuario" value="ONG" onChange={() => setTipoCadastro('ONG')} />
+                            <input
+                                type="checkbox"
+                                name="tipo_usuario"
+                                value="ONG"
+                                checked={tipoCadastro === 'ONG'}
+                                onChange={() => handleCheckboxChange('ONG')}
+                            />
                             <span style={labelCheckboxStyled}>ONG</span>
                         </label>
                         <label style={checkboxStyle}>
-                            <input type="checkbox" name="tipo_usuario" value="Voluntário" onChange={() => setTipoCadastro('Voluntário')} />
+                            <input
+                                type="checkbox"
+                                name="tipo_usuario"
+                                value="Voluntário"
+                                checked={tipoCadastro === 'Voluntário'}
+                                onChange={() => handleCheckboxChange('Voluntário')}
+                            />
                             <span style={labelCheckboxStyled}>Voluntário</span>
                         </label>
                     </p>
                     <p>
                         <label htmlFor="nome_completo">Seu nome completo:</label>
-                        <input id="nome_completo" name="nome_completo" required="required" type="text" placeholder="ex. Seu Nome" value={nome} onChange={(e) => setNome(e.target.value)} />
+                        <input
+                            id="nome_completo"
+                            name="nome_completo"
+                            required
+                            type="text"
+                            placeholder="ex. Seu Nome"
+                            value={nome}
+                            onChange={(e) => setNome(e.target.value)}
+                        />
                     </p>
                     <p>
                         <label htmlFor="email">Seu e-mail</label>
-                        <input id="email" name="email" required="required" type="text" placeholder="ex. seuemail@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input
+                            id="email"
+                            name="email"
+                            required
+                            type="email"
+                            placeholder="ex. seuemail@gmail.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
                     </p>
                     <p>
                         <label htmlFor="senha">Sua senha</label>
-                        <input id="senha" name="senha" required="required" type="password" placeholder="ex. senha" />
+                        <input id="senha" name="senha" required type="password" placeholder="ex. senha" />
                     </p>
                     <p>
                         <input type="submit" value="Cadastrar" />

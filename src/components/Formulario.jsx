@@ -5,7 +5,7 @@ const Formulario = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate('/TelaHome');
+        navigate('/TelaSobre');
     };
 
     return (

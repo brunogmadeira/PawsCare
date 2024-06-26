@@ -118,8 +118,8 @@ input[type='submit'] {
 
 /*estilo do botão submit no hover */
 input[type='submit']:hover {
-  background: rgb(253, 253, 253);
-  color: #1cac78;
+  background:rgb(44, 2, 44);
+  color: #FFFFFF;
 }
 
 /* HEADER */

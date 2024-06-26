@@ -27,6 +27,54 @@ const TelaHome = () => {
         setSelectedAnimal(null);
     };
 
+    const buttonStyle  = {
+        backgroundColor: '#939',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '10px 20px',
+        fontSize: '1rem',
+        cursor: 'pointer',
+    }
+
+    const modalStyle = {
+      display: showModal ? 'block' : 'none',
+      position: 'fixed',
+      zIndex: 1000,
+      left: 0,
+      top: 0,
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+      overflow: 'auto',
+      paddingTop: '50px',
+    };
+  
+    const modalContentStyle = {
+      backgroundColor: '#242424',
+      margin: 'auto',
+      padding: '20px',
+      borderRadius: '5px',
+      border: '1px solid #939',
+      width: '80%',
+      maxWidth: '600px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    };
+  
+    const closeStyle = {
+      color: '#aaa',
+      float: 'right',
+      fontSize: '28px',
+      fontWeight: 'bold',
+    };
+  
+    const whatsappLinkStyle = {
+      textDecoration: 'none',
+      display: 'block',
+      marginTop: '10px',
+      textAlign: 'center',
+    };
+
     // Função para oferecer assistência via WhatsApp
     const handleOfferAssistanceWhatsapp = () => {
         const phone = encodeURIComponent(selectedAnimal.telefone);
@@ -37,6 +85,7 @@ const TelaHome = () => {
     return (
         <div className="containerHome">
           <div className="BlocoHomeEsq">
+          <h1 style={{ color: 'white', fontSize: '2em' }}>Procure por um companheiro!</h1>
             <input
               type="text"
               value={searchText}
@@ -57,7 +106,7 @@ const TelaHome = () => {
                     <p>Endereço: {animal.endereco}</p>
                     <p>Telefone: {animal.telefone}</p>
                     {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
-                    <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
+                    <button onClick={() => handleOfferAssistance(animal)} style={buttonStyle}>Oferecer Assistência</button>
                   </div>
                 ))
               ) : (
@@ -70,7 +119,7 @@ const TelaHome = () => {
                     <p>Endereço: {animal.endereco}</p>
                     <p>Telefone: {animal.telefone}</p>
                     {animal.foto && <img src={URL.createObjectURL(animal.foto)} alt="Foto do animal" style={{ width: '100px', height: '100px' }} />}
-                    <button onClick={() => handleOfferAssistance(animal)}>Oferecer Assistência</button>
+                    <button onClick={() => handleOfferAssistance(animal)} style={buttonStyle}>Oferecer Assistência</button>
                   </div>
                 ))
               )}
@@ -78,16 +127,16 @@ const TelaHome = () => {
           </div>
     
           {showModal && (
-                <div>
-                <div>
-                    <span onClick={handleModalClose}>Fechar</span>
-                    <h2>Oferecer Assistência</h2>
-                    <p>Para oferecer assistência ao animal {selectedAnimal.nome}, clique no botão abaixo para ser redirecionado ao WhatsApp.</p>
-                    <a href="https://chat.whatsapp.com/DXN4NzqEqID7BW6QCnZEKf" target="_blank" rel="noopener noreferrer">
-                        <button>Oferecer Assistência via WhatsApp</button>
-                    </a>
-                </div>
-            </div>
+          <div style={modalStyle}>
+          <div style={modalContentStyle}>
+            <span className="close" style={closeStyle} onClick={handleModalClose}>&times;</span>
+            <h2>Oferecer Assistência</h2>
+            <p>Para oferecer assistência ao animal {selectedAnimal.nome}, clique no botão abaixo para ser redirecionado ao WhatsApp.</p>
+            <a href="https://chat.whatsapp.com/DXN4NzqEqID7BW6QCnZEKf" target="_blank" rel="noopener noreferrer" style={whatsappLinkStyle}>
+              <button style={buttonStyle}>Oferecer Assistência via WhatsApp</button>
+            </a>
+          </div>
+          </div>
           )}
         </div>
       );

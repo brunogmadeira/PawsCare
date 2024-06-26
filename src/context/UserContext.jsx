@@ -7,6 +7,7 @@ export const UserProvider = ({ children }) => {
     nome: '',
     email: '',
     tipoCadastro: '',
+    animais: [], // Array para armazenar os animais cadastrados pelo usuário
   });
 
   const updateUser = (newUser) => {
