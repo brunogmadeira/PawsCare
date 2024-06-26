@@ -5,20 +5,24 @@ import TelaHome from './pages/TelaHome';
 import TelaCadastro from './pages/TelaCadastro';
 import FormularioCadastro from './components/FormularioCadastro';
 import TelaPerfil from './pages/TelaPerfil';
+import { UserProvider } from './context/UserContext';
+
 import './App.css';
 
 function App() {
   return (
     <AnimalProvider>
-      <Router>
-        <Routes>
-          <Route path='/' element={<TelaLogin />} />
-          <Route path='/TelaHome' element={<TelaHome />} />
-          <Route path='/TelaCadastro' element={<TelaCadastro />} />
-          <Route path='/FormularioCadastro' element={<FormularioCadastro />} />
-          <Route path='/TelaPerfil' element={<TelaPerfil />} />
-        </Routes>
+      <UserProvider>
+        <Router>
+          <Routes>
+            <Route path='/' element={<TelaLogin />} />
+            <Route path='/TelaHome' element={<TelaHome />} />
+            <Route path='/TelaCadastro' element={<TelaCadastro />} />
+            <Route path='/FormularioCadastro' element={<FormularioCadastro />} />
+            <Route path='/TelaPerfil' element={<TelaPerfil />} />
+          </Routes>
       </Router>
+      </UserProvider>
     </AnimalProvider>
   );
 }
