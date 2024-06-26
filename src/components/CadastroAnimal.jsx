@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useRef } from 'react';
 import { AnimalContext } from '../context/AnimalContext';
 
 function CadastroAnimal() {
@@ -10,8 +10,10 @@ function CadastroAnimal() {
   const [telefone, setTelefone] = useState('');
   const [foto, setFoto] = useState(null);
   const [mensagem, setMensagem] = useState('');
+  const fotoRef = useRef(null);
 
-  const { addAnimal, userEmail } = useContext(AnimalContext); // Obtém o userEmail do contexto
+
+  const { addAnimal, userEmail } = useContext(AnimalContext);
 
   const styles = {
     container: {
@@ -83,7 +85,7 @@ function CadastroAnimal() {
       endereco,
       telefone,
       foto
-    }, userEmail); // Passa userEmail ao adicionar o animal
+    }, userEmail);
     setNome('');
     setRaca('');
     setCor('');
@@ -91,6 +93,7 @@ function CadastroAnimal() {
     setEndereco('');
     setTelefone('');
     setFoto(null);
+    fotoRef.current.value = '';
     setMensagem('Animal cadastrado com sucesso!');
     setTimeout(() => {
       setMensagem('');
@@ -155,6 +158,7 @@ function CadastroAnimal() {
         type="file"
         accept="image/*"
         onChange={handleFileChange}
+        ref={fotoRef}
         required
       />
       <button style={styles.button} type="submit">Cadastrar</button>

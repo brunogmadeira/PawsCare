@@ -60,6 +60,15 @@ const TelaHome = () => {
       maxWidth: '600px',
       boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     };
+
+    const inputStyle = {
+      margin: '8px 0',
+      padding: '10px',
+      borderRadius: '5px',
+      border: '1px solid #939',
+      fontSize: '1rem',
+      outline: 'none',
+    };
   
     const closeStyle = {
       color: '#aaa',
@@ -75,7 +84,18 @@ const TelaHome = () => {
       textAlign: 'center',
     };
 
-    // Função para oferecer assistência via WhatsApp
+    const containerHome = {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: '20px',
+        border: '1px solid #939',
+        borderRadius: '8px',
+        width: '60%',   
+        height: 'auto',
+        marginLeft: '20%'
+    }
+
     const handleOfferAssistanceWhatsapp = () => {
         const phone = encodeURIComponent(selectedAnimal.telefone);
         const msg = encodeURIComponent('Olá, estou oferecendo assistência para o animal ' + selectedAnimal.nome);
@@ -83,10 +103,11 @@ const TelaHome = () => {
     };
 
     return (
-        <div className="containerHome">
+        <div className="containerHome" style={containerHome}>
           <div className="BlocoHomeEsq">
           <h1 style={{ color: 'white', fontSize: '2em' }}>Procure por um companheiro!</h1>
             <input
+            style={inputStyle}
               type="text"
               value={searchText}
               onChange={handleSearchChange}

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from '../context/UserContext'; 
 import { FaHome, FaUser, FaQuestion, FaPen, FaTrash, FaSave, FaTimes } from "react-icons/fa";
 
@@ -81,9 +81,15 @@ const Perfil = () => {
     const perfilStyle = {
         display: 'flex',
         flexDirection: 'column',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         padding: '20px',
+        border: '1px solid #939',
+        borderRadius: '8px',
+        width: '40%',   
+        height: 'auto',
+        marginLeft: '30%'
     };
+
 
     const iconStyle = {
         fontSize: '2em',
@@ -112,6 +118,7 @@ const Perfil = () => {
 
     const animalListStyle = {
         display: 'flex',
+        justifyContent: 'space-evenly',
         flexWrap: 'wrap',
         gap: '20px',
     };
@@ -120,6 +127,7 @@ const Perfil = () => {
         border: '1px solid #ccc',
         borderRadius: '10px',
         padding: '10px',
+        flex: '0 0 20%', 
     };
 
     const animalFormStyle = {
@@ -278,7 +286,9 @@ const Perfil = () => {
                 )}
             </div>
             <form onSubmit={handleSubmit}></form>
-        </div>
+            <Link to="../"><div className='childMenu'><button className="buttomSair">Sair</button></div></Link>
+        </div>    
+    
     );
 };
 

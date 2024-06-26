@@ -33,9 +33,23 @@ const FormularioCadastro = () => {
         paddingLeft: '4px',
     };
 
+    const styles = {
+        container: {
+            width: '30%',
+            height: '60%',
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            padding: '20px',
+            border: '1px solid #939',
+            borderRadius: '8px',
+        },
+      };
+
     return (
-        <div>
-            <div className="formulario-ong">
+        <div style={styles.container}>
+            <div style={styles.form}>
                 <form onSubmit={handleSubmit}>
                     <h1>Cadastro</h1>
                     <p>

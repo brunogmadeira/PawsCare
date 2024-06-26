@@ -1,12 +1,12 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
-import { UserContext } from './UserContext'; // Certifique-se de que o caminho está correto
+import { UserContext } from './UserContext'; 
 
 export const AnimalContext = createContext();
 
 export const AnimalProvider = ({ children }) => {
-  const { user, updateUser } = useContext(UserContext); // Obtém o usuário e a função de atualização do contexto de usuário
+  const { user, updateUser } = useContext(UserContext);
 
-  const [animals, setAnimals] = useState(user.animais || []); // Estado inicial recebe os animais do usuário ou um array vazio
+  const [animals, setAnimals] = useState(user.animais || []);
 
   useEffect(() => {
     setAnimals(user.animais || []);
@@ -15,7 +15,7 @@ export const AnimalProvider = ({ children }) => {
   const addAnimal = (animal) => {
     const updatedAnimals = [...animals, animal];
     setAnimals(updatedAnimals);
-    updateUser({ ...user, animais: updatedAnimals }); // Atualiza o contexto de usuário com a lista de animais atualizada
+    updateUser({ ...user, animais: updatedAnimals }); 
   };
 
   return (

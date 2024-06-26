@@ -5,7 +5,7 @@ const TelaPerfil = () => {
     return(
         <div>
             <Header/>
-            <br /><br /><br /><br />
+            <br /><br /><br /><br /><br />
             <Perfil/>
         </div>
     )

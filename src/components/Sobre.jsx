@@ -23,15 +23,15 @@ const styles = {
       alignItems: 'center',
     },
     welcomeText: {
-      fontSize: '3rem',  // aumentei o tamanho para 3 rem
+      fontSize: '3rem', 
       fontWeight: 'bold',
       textAlign: 'center',
-      marginBottom: '20px',  // espaço abaixo do texto de boas-vindas
+      marginBottom: '20px', 
     },
     descriptionText: {
-      fontSize: '1.2rem',  // tamanho do texto descritivo
+      fontSize: '1.2rem', 
       textAlign: 'center',
-      maxWidth: '600px',   // largura máxima para alinhar ao centro
+      maxWidth: '600px',   
       lineHeight: '1.6',
     },
     carouselSection: {
